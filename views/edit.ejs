@@ -1,0 +1,48 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <form method="POST" action="/listings/<%= data._id %>?_method=PUT">
+       
+       
+           <div class="rows">
+            <div class="col-8 offset-2"> 
+                <div>
+                    <h3>Edit your Listing</h3>
+                </div>
+            <div>
+                <label for="title" class="form-label" >Title</label>
+                <input class="form-control"  type="text" name="listing[title]" value="<%= data.title %>"placeholder="EnterTitle"></input>  
+            </div>
+            
+    
+            <div>
+                <label for="description" class="form-label" >description</label>
+                <textarea class="form-control" name="listing[description]"><%= data.description %></textarea>
+            </div>
+    
+           
+       
+            <div>
+                <label for="country" class="form-label" >country</label>
+                <input class="form-control" name="listing[country]" value="<%= data.country %>"placeholder="Enter Country">
+            </div>
+         <div>
+            <label for="location" class="form-label" >location</label>
+            <input class="form-control" name="listing[location]" value="<%= data.location %>"placeholder="Enter Location">
+            
+         </div>
+        
+        
+            
+            
+            
+           <div>
+            <label for="price" class="form-label" >price</label>
+            <input class="form-control" name="listing[price]"value="<%= data.price %>" placeholder="price" type="number">
+           </div>
+            <br>
+    
+        <button class="btn btn-dark btn-add">ADD</button>
+    </form>
+</div>
+</div>
+</body>
